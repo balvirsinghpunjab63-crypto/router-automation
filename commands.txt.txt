@@ -1,0 +1,77 @@
+terminal length 0
+terminal width 0
+show platform
+show inventory
+admin show platform
+admin show inventory
+show install active
+show install active summary
+admin show install active
+admin show install active summary
+admin show version
+admin show hw-module fpd
+show media
+admin show media
+show redundancy
+admin show memory_status
+admin show environment all
+show controllers gigabitEthernet *
+show controllers TenGigE *
+show controllers HundredGigE *
+show logging
+show running-config
+show interface description
+show ipv4 vrf all interface brief
+show int desc
+show ipv4 interface brief
+show ipv4 vrf all interface brief
+show bundle brief
+show bundle
+show interface brief
+show interface
+show bfd session
+show vrrp brief
+show arp vrf all
+show isis hostname
+show isis neighbor
+show isis neighbors detail
+show isis topology
+show isis protocol
+show isis database
+show isis database verbose
+show ospf vrf all
+show ospf vrf all summary
+show ospf vrf all interface
+show ospf vrf all neighbor
+show bgp ipv4 unicast summary
+show bgp ipv4 labeled-unicast summary
+show bgp vpnv4 unicast summary
+show bgp all all summary
+show bgp vrf all summary
+show bgp labels
+show mpls forwarding detail
+show cef
+show isis segment-routing label table
+show bgp all all summary
+show bgp ipv4 labeled-unicast labels
+show bgp vpnv4 unicast labels
+show cef vrf all
+show cef forwarding
+show mpls forwarding detail
+show mpls forwarding vrf all detail
+show mpls label table detail
+show mpls label table vrf all detail
+show mpls label table vrf all summary
+show mpls label range
+show route
+show route vrf all
+show route summary
+show route summary detail
+show route vrf all summary
+show ospf routes detail
+show ospf vrf all database
+show ospf vrf all routes
+show bgp ipv4 unicast
+show bgp ipv4 labeled-unicast
+show bgp vpnv4 unicast
+show bgp vrf all
