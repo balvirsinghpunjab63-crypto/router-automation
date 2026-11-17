@@ -1,25 +1,26 @@
-# Pre-check Script - Router Automation
-# Ye commands.txt se commands padh ke router pe chalayega
+from netmiko import ConnectHandler
 
-def main():
-    print("=== Router Pre-Check Shuru ===")
-    
-    # commands.txt se list padhna
-    try:
-        with open("commands.txt", "r") as f:
-            commands = [line.strip() for line in f if line.strip()]
-    except FileNotFoundError:
-        print("commands.txt nahi mili! Pehle usko upload karo.")
-        return
+print("=== Router Login ===")
+ip = input("Router IP daalo: ")
+username = input("Username: ")
+password = input("Password: ")
 
-    print(f"Total Commands Mili: {len(commands)}")
-    print("---")
+router = {
+    'device_type': 'cisco_ios',
+    'host': ip,
+    'username': username,
+    'password': password,
+}
+
+try:
+    net_connect = ConnectHandler(**router)
+    print("Connected! ✅")
+    with open("commands.txt", "r") as f:
+        commands = [line.strip() for line in f if line.strip()]
     for cmd in commands:
-        print(f"Chalegi: {cmd}")
-    
-    print("---")
-    print("=== Pre-Check Khatam ===")
-    print("Ab isko router se jodna baaki hai - agle step me karenge")
-
-if __name__ == "__main__":
-    main()
+        print(f"\n--- {cmd} ---")
+        print(net_connect.send_command(cmd))
+    net_connect.disconnect()
+    print("\n=== Khatam ===")
+except Exception as e:
+    print(f"Error: {e}")
