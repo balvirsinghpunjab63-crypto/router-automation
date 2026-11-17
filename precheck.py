@@ -6,7 +6,7 @@ username = input("Username: ")
 password = input("Password: ")
 
 router = {
-    'device_type': 'cisco_ios',
+    'device_type': 'cisco_xr',
     'host': ip,
     'username': username,
     'password': password,
