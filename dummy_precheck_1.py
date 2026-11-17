@@ -2,7 +2,7 @@
 import time
 
 print("=== Router Login ===")
-ip = input("213.51.0.31: ")
+ip = input("1.1.1.1: ")
 username = input("test: ")
 password = input("test123: ")
 
